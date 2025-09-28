@@ -102,12 +102,12 @@ Each VLAN is assigned a full Class C subnet (/24), with DHCP handling host IP al
 ## 📝 File List
 
 | File                 | Description                    |
-|----------------------|--------------------------------|
-| `HotelNetwork.pkt`    | Main Cisco Packet Tracer project |
-| `README.md`          | This documentation             |
-| `Documentation.pdf` * | Full technical report          |
-| `subnet-plan.png`    | Subnetting and IP planning     |
-| `topology.png`       | Network diagram screenshot     |
+|----------------------|-------------------------------|
+| [`HotelNetwork.pkt`](./HotelNetwork.pkt)    | Main Cisco Packet Tracer project |
+| [`README.md`](./README.md)          | This documentation             |
+| [`Documentation.pdf`](./Documentation.pdf) | Full technical report          |
+| [`subnet-plan.png`](./subnet-plan.png)    | Subnetting and IP planning     |
+| [`topology.png`](./topology.png)       | Network diagram screenshot     |
 
 
 
