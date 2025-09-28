@@ -1,94 +1,118 @@
-# Hotel-Network-System
-🏨 Hotel Network System – CCNA Final Project
-📘 Overview
+# 🏨 Hotel Network System – CCNA Final Project
 
-This project simulates a hotel’s internal network infrastructure, built using Cisco Packet Tracer as part of the final project for the CCNA course at NTI.
-The network is designed with scalability, segmentation, and manageability in mind using:
+## 📌 Overview
 
-VLANs
+A fully segmented and scalable hotel network infrastructure created using **Cisco Packet Tracer** as part of the CCNA final project at NTI. The system simulates real-world enterprise networking across 3 floors, each containing specific departments. The project includes VLANs, inter-VLAN routing, DHCP, subnetting, and OSPF dynamic routing.
 
-Router-on-a-Stick (Inter-VLAN Routing)
+---
 
-DHCP
+## 🔑 Key Features
 
-OSPF Routing
+- 🧱 **VLAN Segmentation**  
+  Logical separation of departments using VLANs to enhance security and broadcast efficiency.
 
-Subnetting using Class A address space
+- 🔀 **Router-on-a-Stick**  
+  Inter-VLAN communication via sub-interfaces configured on a single router interface.
 
-🏢 Network Structure
+- 🎯 **DHCP Server Integration**  
+  Dynamic IP assignment for each VLAN through centralized DHCP pools.
 
-The hotel consists of 3 floors, each with designated departments:
+- 🛰 **OSPF Dynamic Routing**  
+  Routers exchange routes and build dynamic routing tables over serial point-to-point links.
 
-🔹 Floor 1:
+- 🧮 **Custom Subnetting Plan**  
+  Efficient address usage using subnetted Class A (`10.10.10.0/8`) for WAN links.
 
-Reception (VLAN 10 - 192.168.10.0/24)
+- 📶 **Layer 2 Switching**  
+  Switches configured with trunk and access ports for proper VLAN tagging and traffic flow.
 
-Store (VLAN 20 - 192.168.20.0/24)
+---
 
-Logistics (VLAN 30 - 192.168.30.0/24)
+## 🏢 Floor Structure
 
-🔹 Floor 2:
+| Floor | Departments | VLAN ID | Subnet             |
+|-------|-------------|---------|--------------------|
+| 1     | Reception   | 10      | 192.168.10.0/24    |
+|       | Store       | 20      | 192.168.20.0/24    |
+|       | Logistics   | 30      | 192.168.30.0/24    |
+| 2     | Finance     | 40      | 192.168.40.0/24    |
+|       | HR          | 50      | 192.168.50.0/24    |
+|       | Sales       | 60      | 192.168.60.0/24    |
+| 3     | Admin       | 70      | 192.168.70.0/24    |
+|       | IT          | 80      | 192.168.80.0/24    |
 
-Finance (VLAN 40 - 192.168.40.0/24)
+---
 
-HR (VLAN 50 - 192.168.50.0/24)
+## ⚙️ Technologies Used
 
-Sales (VLAN 60 - 192.168.60.0/24)
+- Cisco Packet Tracer  
+- Router-on-a-Stick  
+- OSPF Routing Protocol  
+- DHCP Services  
+- Custom Subnetting  
+- Layer 2 Switching
 
-🔹 Floor 3:
+---
 
-Admin (VLAN 70 - 192.168.70.0/24)
+## 🔗 IP & Subnetting Plan
 
-IT (VLAN 80 - 192.168.80.0/24)
+### 📡 WAN Links (Point-to-Point - /30 Subnets)
 
-⚙️ Features Implemented
-✅ 1. VLAN Configuration
+| Link | Network         | Host 1        | Host 2         | Broadcast       |
+|------|-----------------|---------------|----------------|-----------------|
+| n1   | 10.10.10.0/30   | 10.10.10.1    | 10.10.10.2     | 10.10.10.3      |
+| n2   | 10.10.10.4/30   | 10.10.10.5    | 10.10.10.6     | 10.10.10.7      |
+| n3   | 10.10.10.8/30   | 10.10.10.9    | 10.10.10.10    | 10.10.10.11     |
 
-Departments are isolated into VLANs to enhance security and reduce broadcast domains.
+### 🖧 LAN Subnets
 
-✅ 2. Inter-VLAN Routing
+Each VLAN is assigned a full Class C subnet (/24), with DHCP handling host IP allocation.
 
-Implemented using Router-on-a-Stick via sub-interfaces on the router (Gig0/0).
+---
 
-✅ 3. DHCP Server
+## 🚀 How to Run
 
-The main router dynamically assigns IP addresses to devices in each VLAN.
+1. Open the `.pkt` file in **Cisco Packet Tracer**.  
+2. Check VLAN and trunk configurations on switches.  
+3. Verify sub-interfaces and DHCP pools on the router.  
+4. Run `ping` tests across departments to verify routing.  
+5. Use `show vlan`, `show ip route`, and `show ip ospf neighbor` for verification.
 
-✅ 4. OSPF Routing
+---
 
-All routers are connected via point-to-point serial links and run OSPF (single-area, area 0).
+## 📷 Demo
 
-✅ 5. Subnetting
+- **Topology Screenshot**  
+- **Subnetting Plan Image**  
+-[![Screenshot-2025-09-19-184323.png](https://i.postimg.cc/dV7fWFqd/Screenshot-2025-09-19-184323.png)](https://postimg.cc/zyrpB9HX)
 
-Used Class A address 10.10.10.0/8 and subnetted into /30 networks for serial links:
+---
 
-Link	Network	Host 1	Host 2	Broadcast
-n1	10.10.10.0/30	10.10.10.1	10.10.10.2	10.10.10.3
-n2	10.10.10.4/30	10.10.10.5	10.10.10.6	10.10.10.7
-n3	10.10.10.8/30	10.10.10.9	10.10.10.10	10.10.10.11
-🧪 Testing & Verification
 
-Devices across VLANs can communicate via the router.
+## 👨‍🎓 Author
 
-ping tested between different floors and departments.
+**Name:** [ZiadRehan]  
+**Institute:** National Telecommunication Institute (NTI)  
+**Course:** CCNA Final Project  
+**Date:** September 2025
 
-Routing tables verified using show ip route.
+---
 
-OSPF neighbor adjacency confirmed with show ip ospf neighbor.
+## 📝 File List
 
-📁 Files Included
+| File                 | Description                    |
+|----------------------|--------------------------------|
+| `HotelNetwork.pkt`    | Main Cisco Packet Tracer project |
+| `README.md`          | This documentation             |
+| `Documentation.pdf` * | Full technical report          |
+| `subnet-plan.png`    | Subnetting and IP planning     |
+| `topology.png`       | Network diagram screenshot     |
 
-HotelNetwork.pkt – Cisco Packet Tracer project file
 
-README.md – Project documentation
 
-Documentation.pdf (optional) – Full detailed explanation
 
-Screenshots of network topology and IP plans
 
-👨‍💻 Author
+<div align="right">
+<a href="mailto:zezorehan938@gmail.com">𝓩𝓲𝓪𝓭𝓻𝓮𝓱𝓪𝓪𝓷</a>  
 
-Name: [Your Name]
-Institute: National Telecommunication Institute (NTI)
-Course: CCNA Final Project
-Date: Sept 2025
+</div>
