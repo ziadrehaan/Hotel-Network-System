@@ -83,7 +83,7 @@ Each VLAN is assigned a full Class C subnet (/24), with DHCP handling host IP al
 ## 📷 Demo
 
 - **Topology Screenshot**
-- -[![Screenshot-2025-09-19-184323.png](https://i.postimg.cc/dV7fWFqd/Screenshot-2025-09-19-184323.png)](https://postimg.cc/ftf9RTpw ) 
+- -[![Screenshot-2025-09-19-184323.png](https://postimg.cc/ftf9RTpw )](https://postimg.cc/ftf9RTpw ) 
 - **Subnetting Plan Image**  
 -[![Screenshot-2025-09-19-184323.png](https://i.postimg.cc/dV7fWFqd/Screenshot-2025-09-19-184323.png)](https://postimg.cc/zyrpB9HX)
 
