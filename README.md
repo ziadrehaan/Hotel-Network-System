@@ -1,5 +1,6 @@
 # 🏨 Hotel Network System – CCNA Final Project
-
+[![Whats-App-Image-2025-09-28-at-15-10-07-34a14786.jpg](https://i.postimg.cc/X7ByjCPD/Whats-App-Image-2025-09-28-at-15-10-07-34a14786.jpg)](https://postimg.cc/rKcpgKMS)
+---
 ## 📌 Overview
 
 A fully segmented and scalable hotel network infrastructure created using **Cisco Packet Tracer** as part of the CCNA final project at NTI. The system simulates real-world enterprise networking across 3 floors, each containing specific departments. The project includes VLANs, inter-VLAN routing, DHCP, subnetting, and OSPF dynamic routing.
